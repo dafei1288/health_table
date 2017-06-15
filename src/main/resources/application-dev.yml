@@ -1,0 +1,25 @@
+server:
+  port: 9098
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  h2:
+    tcp:
+      port: 9093
+      enabled: false
+    web:
+      port: 8083
+      enabled: true
+    console:
+      settings:
+        web-allow-others: true
+      enabled: true
